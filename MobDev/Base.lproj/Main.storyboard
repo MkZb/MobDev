@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxo-gS-CKr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="stf-el-njM">
+            <objects>
+                <viewController id="z0X-uX-Sd5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRu-yL-Pzg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jVe-Ru-F31"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="5gI-t9-XNK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbb-cd-Sl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="370"/>
+        </scene>
+        <!--Basic-->
+        <scene sceneID="wyh-mf-Rsi">
+            <objects>
+                <viewController id="A68-9N-kUl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFE-UK-ygX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зубець Микола Група ІВ-81 ІВ-8115" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-5a-qO3">
+                                <rect key="frame" x="146" y="417.5" width="122" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nxo-iA-9qo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jn0-5a-qO3" firstAttribute="centerY" secondItem="WFE-UK-ygX" secondAttribute="centerY" id="GkM-z3-4hr"/>
+                            <constraint firstItem="jn0-5a-qO3" firstAttribute="centerX" secondItem="WFE-UK-ygX" secondAttribute="centerX" id="Ozc-75-kVt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Basic" image="wrench" catalog="system" id="Rel-S1-pDR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CS2-Aw-usM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="-236"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uep-pR-QHC">
+            <objects>
+                <tabBarController id="nxo-gS-CKr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIf-aK-VGP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="A68-9N-kUl" kind="relationship" relationship="viewControllers" id="Pon-d0-BxD"/>
+                        <segue destination="z0X-uX-Sd5" kind="relationship" relationship="viewControllers" id="UyP-uQ-8wC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQM-h3-DNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wrench" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
