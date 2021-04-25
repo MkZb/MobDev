@@ -1,4 +1,2 @@
 # Mobile Development course.
-Main branch is the most recent lab work.
-
-Any other one can be seen in their own branch.
+Every laboratory work in their own branch.
