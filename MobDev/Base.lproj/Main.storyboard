@@ -8,12 +8,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Books-->
+        <scene sceneID="13G-Gp-Rzt">
+            <objects>
+                <viewController id="y4t-dL-SNp" customClass="DrawingBooksController" customModule="MobDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ihX-Xb-44K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-Yc-wPF">
+                                <rect key="frame" x="15" y="64" width="384" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="Jex-0b-um3" customClass="TableViewCell" customModule="MobDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="384" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jex-0b-um3" id="xa2-Le-luc">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Geb-TJ-bV3">
+                                                    <rect key="frame" x="20" y="11" width="100" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="9IX-LE-a8I"/>
+                                                        <constraint firstAttribute="height" constant="150" id="Yp4-qg-V0D"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-8C-Cp9">
+                                                    <rect key="frame" x="123" y="11" width="241" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1X2-8C-Cp9" firstAttribute="top" secondItem="xa2-Le-luc" secondAttribute="topMargin" id="Cvf-Uz-FZS"/>
+                                                <constraint firstItem="1X2-8C-Cp9" firstAttribute="leading" secondItem="Geb-TJ-bV3" secondAttribute="trailing" constant="3" id="DAp-JP-YyR"/>
+                                                <constraint firstItem="Geb-TJ-bV3" firstAttribute="leading" secondItem="xa2-Le-luc" secondAttribute="leadingMargin" id="JAR-zN-kKC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1X2-8C-Cp9" secondAttribute="bottom" id="NVr-Vl-ecJ"/>
+                                                <constraint firstItem="Geb-TJ-bV3" firstAttribute="top" secondItem="xa2-Le-luc" secondAttribute="topMargin" id="X2E-f9-7Rv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1X2-8C-Cp9" secondAttribute="trailing" id="ndh-t9-CVZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="1X2-8C-Cp9" id="cjc-Zs-VcF"/>
+                                            <outlet property="cellPic" destination="Geb-TJ-bV3" id="yUT-1y-fZg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="y4t-dL-SNp" id="XMd-h0-0Wu"/>
+                                    <outlet property="delegate" destination="y4t-dL-SNp" id="cbT-cT-K6m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ysP-fa-czj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ysP-fa-czj" firstAttribute="bottom" secondItem="5Bm-Yc-wPF" secondAttribute="bottom" constant="20" id="04W-Av-NtR"/>
+                            <constraint firstItem="5Bm-Yc-wPF" firstAttribute="leading" secondItem="ysP-fa-czj" secondAttribute="leading" constant="15" id="3Ty-5V-Ha6"/>
+                            <constraint firstItem="5Bm-Yc-wPF" firstAttribute="top" secondItem="ysP-fa-czj" secondAttribute="top" constant="20" id="Qol-M3-8zl"/>
+                            <constraint firstItem="ysP-fa-czj" firstAttribute="trailing" secondItem="5Bm-Yc-wPF" secondAttribute="trailing" constant="15" id="R8m-8C-1yq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Books" image="book" catalog="system" id="0hj-PZ-zG4"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Bm-Yc-wPF" id="kOr-Sx-ntC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNl-Be-Fek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.43478260869574" y="1055.3571428571429"/>
+        </scene>
         <!--Draw-->
         <scene sceneID="lDZ-W5-t79">
             <objects>
                 <viewController id="JXc-um-0YD" customClass="DrawingViewController" customModule="MobDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1AP-BX-OGq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WYl-nt-cG1">
@@ -79,7 +152,7 @@
             <objects>
                 <viewController id="Ekh-er-Blu" customClass="ViewController" customModule="MobDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDb-37-tA9">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зубець Микола Група ІВ-81 ЗК ІВ-8115" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLS-Ev-Ml2">
@@ -114,6 +187,7 @@
                     <connections>
                         <segue destination="Ekh-er-Blu" kind="relationship" relationship="viewControllers" id="eAE-u2-GDp"/>
                         <segue destination="JXc-um-0YD" kind="relationship" relationship="viewControllers" id="oxU-tK-Bj8"/>
+                        <segue destination="y4t-dL-SNp" kind="relationship" relationship="viewControllers" id="wvL-65-yg5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoe-mc-qKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -122,6 +196,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="wrench" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
