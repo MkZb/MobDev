@@ -24,9 +24,16 @@ class DrawingBooksController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
-        cell.cellLabel?.text = self.books[indexPath.row].title + "\n\n" + self.books[indexPath.row].subtitle + "\n\n" + self.books[indexPath.row].price
-        if self.books[indexPath.row].image != "" {
-            cell.cellPic?.image = UIImage(named: self.books[indexPath.row].image)
+        var text: String = self.books[indexPath.row].title! + "\n\n"
+        text += self.books[indexPath.row].subtitle! + "\n\n"
+        if let price = self.books[indexPath.row].price {
+            text += String(format: "$%.2f", price)
+        } else {
+            text += "Priceless"
+        }
+        cell.cellLabel?.text = text
+        if let img = self.books[indexPath.row].image{
+            cell.cellPic?.image = img
             cell.cellPic?.contentMode = .scaleAspectFit
         } else {
             cell.cellPic?.image = nil
@@ -64,18 +71,29 @@ class DrawingBooksController: UIViewController, UITableViewDelegate, UITableView
     }
     
     class Book {
-        var title: String
-        var subtitle: String
-        var isbn13: String
-        var price: String
-        var image: String
+        var title: String?
+        var subtitle: String?
+        var isbn13: Int64?
+        var price: Float?
+        var image: UIImage?
         
         init(title: String, subtitle: String, isbn13: String, price: String, image: String) {
+            
             self.title = title
             self.subtitle = subtitle
-            self.isbn13 = isbn13
-            self.price = price
-            self.image = image
+            if isbn13.range(of: #"[0-9]+"#, options: .regularExpression) != nil {
+                self.isbn13 = Int64(isbn13)
+            } else {
+                self.isbn13 = nil
+            }
+            if price.range(of: #"\$[0-9]+\.[0-9]+"#, options: .regularExpression) != nil {
+                self.price = Float(price.replacingOccurrences(of: "$", with: ""))
+            } else {
+                self.price = nil
+            }
+            if image != "" {
+                self.image = UIImage(named: image)
+            }
         }
     }
 }
