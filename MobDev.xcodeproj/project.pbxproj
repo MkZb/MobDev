@@ -31,6 +31,9 @@
 		A9F37C2E2646A20600A6F922 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C2D2646A20600A6F922 /* BookDetailViewController.swift */; };
 		A9F37C352646B36700A6F922 /* bookInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C342646B36700A6F922 /* bookInfoCell.swift */; };
 		A9F37C3C2646C10E00A6F922 /* BookAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C3B2646C10E00A6F922 /* BookAddViewController.swift */; };
+		A9F37C472647168300A6F922 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C462647168300A6F922 /* CustomCollectionViewLayout.swift */; };
+		A9F37C4A264717E800A6F922 /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C49264717E800A6F922 /* CollectionsViewController.swift */; };
+		A9F37C4D26471B7000A6F922 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F37C4C26471B7000A6F922 /* CustomCollectionViewCell.swift */; };
 		A9F9AA0C26342F9C00281F0C /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F9AA0B26342F9C00281F0C /* DrawingViewController.swift */; };
 		A9FA2C3725F53F5F00F85878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA2C3625F53F5F00F85878 /* AppDelegate.swift */; };
 		A9FA2C3925F53F5F00F85878 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA2C3825F53F5F00F85878 /* SceneDelegate.swift */; };
@@ -66,6 +69,9 @@
 		A9F37C2D2646A20600A6F922 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		A9F37C342646B36700A6F922 /* bookInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookInfoCell.swift; sourceTree = "<group>"; };
 		A9F37C3B2646C10E00A6F922 /* BookAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAddViewController.swift; sourceTree = "<group>"; };
+		A9F37C462647168300A6F922 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		A9F37C49264717E800A6F922 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
+		A9F37C4C26471B7000A6F922 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9F9AA0B26342F9C00281F0C /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		A9FA2C3325F53F5F00F85878 /* MobDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FA2C3625F53F5F00F85878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 				A9F9AA0B26342F9C00281F0C /* DrawingViewController.swift */,
 				A9F37C342646B36700A6F922 /* bookInfoCell.swift */,
 				A9F37C3B2646C10E00A6F922 /* BookAddViewController.swift */,
+				A9F37C462647168300A6F922 /* CustomCollectionViewLayout.swift */,
+				A9F37C49264717E800A6F922 /* CollectionsViewController.swift */,
+				A9F37C4C26471B7000A6F922 /* CustomCollectionViewCell.swift */,
 			);
 			path = MobDev;
 			sourceTree = "<group>";
@@ -250,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F37C4A264717E800A6F922 /* CollectionsViewController.swift in Sources */,
 				A9FA2C3725F53F5F00F85878 /* AppDelegate.swift in Sources */,
 				A9F37C3C2646C10E00A6F922 /* BookAddViewController.swift in Sources */,
+				A9F37C4D26471B7000A6F922 /* CustomCollectionViewCell.swift in Sources */,
 				A9F9AA0C26342F9C00281F0C /* DrawingViewController.swift in Sources */,
 				A9F37C352646B36700A6F922 /* bookInfoCell.swift in Sources */,
 				A9FAF3872634736500095ADF /* DiagramView.swift in Sources */,
@@ -259,6 +270,7 @@
 				A9FAF384263436F900095ADF /* DrawView.swift in Sources */,
 				A91A2D842634D31A00AEB563 /* TableViewCell.swift in Sources */,
 				A9F37C2E2646A20600A6F922 /* BookDetailViewController.swift in Sources */,
+				A9F37C472647168300A6F922 /* CustomCollectionViewLayout.swift in Sources */,
 				A9FA2C3925F53F5F00F85878 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
